@@ -20,11 +20,11 @@ const HeroSection = () => {
         <h2 className="text-2xl text-center font-robotoSlab text-textColor mb-4  ">
           Наша міссія
         </h2>
-        <div className="flex gap-6">
+        <div className="flex gap-6 sm:flex-col sm:items-center sm:justify-start">
           <Image
             src={imageMission}
             alt="Picture tubes"
-            className="w-[460px] h-[340px]"
+            className="w-[460px] h-[340px]  sm:mb-2 sm:h-auto"
           />
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -48,11 +48,11 @@ const HeroSection = () => {
         <h2 className="text-2xl text-center font-robotoSlab text-textColor mb-4  ">
           Наши переваги
         </h2>
-        <div className="flex gap-6">
+        <div className="flex gap-6 sm:flex-col sm:items-center sm:justify-start">
           <Image
             src={imageAdvantages}
             alt="Picture tubes"
-            className="w-[460px] h-[340px]"
+            className="w-[460px] h-[340px]  sm:mb-2 sm:h-auto"
           />
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text.

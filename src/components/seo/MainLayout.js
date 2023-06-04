@@ -1,10 +1,10 @@
 import Footer from "../Footer/Footer";
-import HeaderNav from "../Header/HeaderNav";
+import Header from "../Header/Header";
 
 const MainLayout = ({ children }) => {
   return (
     <>
-      <HeaderNav />
+      <Header />
       <main className="">{children}</main>
       <Footer />
     </>

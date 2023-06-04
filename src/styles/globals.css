@@ -15,16 +15,23 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 80px;
   }
   .logo-text {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: white;
+  }
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 }
 
 @layer components {
   section {
-    padding: 140px 15px 20px 15px;
+    padding: 20px 15px;
   }
 }

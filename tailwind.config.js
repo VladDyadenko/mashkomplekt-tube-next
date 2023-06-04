@@ -20,6 +20,7 @@ module.exports = {
         robotoSlab: ["Roboto Slab", "serif"],
         raleway: ["Raleway", "sans-serif"],
         russo: ["Russo One", "sans-serif"],
+        roboto: ["Roboto", "serif"],
       },
       colors: {
         textColor: "#2a2a2a",
