@@ -11,9 +11,6 @@ const Filter = () => {
       </div>
       <FilterClineBtn variant="outlined">Очистити фільтр</FilterClineBtn>
       <CustomHr />
-      <FilterSelect />
-      <FilterSelect />
-      <FilterSelect />
     </>
   );
 };
