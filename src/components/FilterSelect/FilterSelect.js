@@ -1,81 +1,69 @@
-import * as React from "react";
-import { useTheme } from "@mui/material/styles";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+import { CustomHr } from "../Filter/Filter.styled";
 
-const ITEM_HEIGHT = 50;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
+const diametrs = ["10", "15", "20", "30", "40", "50", "60"];
+const walls = ["1", "1,5", "2,0", "3,0", "4,0", "5,0", "6,0"];
+const grades = ["20", "20XГСА", "10", "09Г2С", "40X", "35", "40Ш"];
 
-const names = [
-  "Oliver Hansen",
-  "Van Henry",
-  "April Tucker",
-  "Ralph Hubbard",
-  "Omar Alexander",
-  "Carlos Abbott",
-  "Miriam Wagner",
-  "Bradley Wilkerson",
-  "Virginia Andrews",
-  "Kelly Snyder",
-];
-
-function getStyles(name, personName, theme) {
-  return {
-    fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-  };
-}
-
-const FilterSelect = () => {
-  const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
-
-  const handleChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(typeof value === "string" ? value.split(",") : value);
-  };
-
+const FilterSelect2 = () => {
   return (
-    <div>
-      <FormControl sx={{ m: 1, width: "100%", marginBottom: 2 }}>
-        <InputLabel id="demo-multiple-name-label">Діаметр</InputLabel>
-        <Select
-          labelId="demo-multiple-name-label"
-          id="demo-multiple-name"
-          multiple
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput label="Діаметр" />}
-          MenuProps={MenuProps}
-        >
-          {names.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
-            >
-              {name}
-            </MenuItem>
+    <>
+      <CustomHr />
+      <div className="mb-4">
+        <p className="font-robotoSlab font-normal text-[16px] mb-3">Діаметр</p>
+        <ul className="relative max-h-[150px] overflow-y-auto">
+          {diametrs.map((diametr) => (
+            <li key={diametr}>
+              <label className="flex items-center py-1 font-robotoSlab font-normal text-[14px]">
+                <span className="checkbox block relative mr-4 mb-0 h-4 w-4 z-50 cursor-pointer">
+                  <input type="checkbox" className="checkbox__input" />
+                  <span className="checkbox__placeholder block absolute w-4 h-4 rounded border border-solid border-[#818a8f]" />
+                </span>
+                {diametr}
+              </label>
+            </li>
           ))}
-        </Select>
-      </FormControl>
-    </div>
+        </ul>
+      </div>
+      <CustomHr />
+      <div className="mb-4">
+        <p className="font-robotoSlab font-normal text-[16px] mb-3">
+          Товщина стінки
+        </p>
+        <ul className="relative max-h-[150px] overflow-y-auto">
+          {walls.map((wall) => (
+            <li key={wall}>
+              <label className="flex items-center py-1 font-robotoSlab font-normal text-[14px]">
+                <span className="checkbox block relative mr-4 mb-0 h-4 w-4 z-50 cursor-pointer">
+                  <input type="checkbox" className="checkbox__input" />
+                  <span className="checkbox__placeholder block absolute w-4 h-4 rounded border border-solid border-[#818a8f]" />
+                </span>
+                {wall}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <CustomHr />
+      <div className="mb-4">
+        <p className="font-robotoSlab font-normal text-[16px] mb-3">
+          Марка сталі
+        </p>
+        <ul className="relative max-h-[150px] overflow-y-auto">
+          {grades.map((grade) => (
+            <li key={grade}>
+              <label className="flex items-center py-1 font-robotoSlab font-normal text-[14px]">
+                <span className="checkbox block relative mr-4 mb-0 h-4 w-4 z-50 cursor-pointer">
+                  <input type="checkbox" className="checkbox__input" />
+                  <span className="checkbox__placeholder block absolute w-4 h-4 rounded border border-solid border-[#818a8f]" />
+                </span>
+                {grade}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 };
 
-export default FilterSelect;
+export default FilterSelect2;

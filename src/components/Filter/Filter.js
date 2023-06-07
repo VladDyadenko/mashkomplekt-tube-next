@@ -1,5 +1,5 @@
 import { BsSliders } from "react-icons/bs";
-import { CustomHr, FilterClineBtn } from "./Filter.styled";
+import { FilterClineBtn } from "./Filter.styled";
 import FilterSelect from "../FilterSelect/FilterSelect";
 
 const Filter = () => {
@@ -10,7 +10,7 @@ const Filter = () => {
         <BsSliders />
       </div>
       <FilterClineBtn variant="outlined">Очистити фільтр</FilterClineBtn>
-      <CustomHr />
+      <FilterSelect />
     </>
   );
 };

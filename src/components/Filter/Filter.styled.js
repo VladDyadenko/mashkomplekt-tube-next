@@ -10,13 +10,13 @@ export const FilterClineBtn = styled(Button)`
   border-color: #b5b8b1;
   margin-bottom: 20px;
   &:hover {
-    background-color: #2a2;
+    background-color: #008000;
     color: #fff;
-    border-color: #2a2;
+    border-color: #008000;
   }
 `;
 export const CustomHr = styled.hr`
   margin-bottom: 12px;
-  border-width: 2px;
-  border-color: #8d917a;
+  border-width: 1px;
+  border-color: #a9a9a9;
 `;

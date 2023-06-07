@@ -16,6 +16,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 80px;
+    background-color: #fff;
   }
   .logo-text {
     -webkit-text-fill-color: transparent;
@@ -27,6 +28,48 @@
     max-width: 1440px;
     margin: 0 auto;
     box-sizing: border-box;
+  }
+  .checkbox__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .checkbox__placeholder::after {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;base64,PHN0b3JlIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE2IDE1Ij48cGF0aCBkPSJNMi45NTcwMyA0Ljc1MTY2TDEuODg4MjUgNC42ODYwNEwxLjgxOTIzIDQuNzUxNjZMMTAuOTMyMyAxLjg0MTEgMS43NjgxEzEuODE5MjMgMS43Nzg4MSAxLjc2ODExIDEuODgxIiBzdHJva2Utd2lkdGg9IjAuMiIgc3Ryb2tlLWxpbmVjYXA9Im5vbmUiIHN0cm9rZS1saW5lam9pbj0ibm9uZSIgeDE9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxNiAxNSIgZmlsbD0iIzAwMDAwMCIvcGF0aD48L3N0b3JlPg==");
+    background-size: 12px auto;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    content: "";
+  }
+
+  .checkbox__input:checked ~ .checkbox__placeholder::after {
+    display: block;
+    width: 8px;
+    height: 4px;
+    background: 0 0;
+    border-left: 1px solid #008000;
+    border-bottom: 1px solid #008000;
+    transform: rotate(-44deg);
+    top: 4px;
+    left: 3px;
+  }
+  .checkbox__input:checked ~ .checkbox__placeholder {
+    border: 1px solid #008000;
   }
 }
 
