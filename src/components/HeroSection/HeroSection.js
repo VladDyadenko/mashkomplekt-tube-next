@@ -3,19 +3,15 @@ import imageMission from "../../assets/images/tube-5.jpg";
 import imageAdvantages from "../../assets/images/tube-3.jpg";
 import HeadSite from "../seo/HeadSite";
 import { Container } from "@mui/material";
+import { seoHeadHome } from "../../assets/constants/HeadSeo";
 
-const seo = {
-  title: "Машкомплект | товстостінна труба | металопрокат",
-  keywords: "труби товстостінні, Київ, Дніпро, склад, порізка",
-  description: "великій вибір труб",
-};
 const HeroSection = () => {
   return (
     <>
       <HeadSite
-        title={seo.title}
-        keywords={seo.keywords}
-        description={seo.description}
+        title={seoHeadHome.title}
+        keywords={seoHeadHome.keywords}
+        description={seoHeadHome.description}
       ></HeadSite>
       <Container>
         <section className="">
