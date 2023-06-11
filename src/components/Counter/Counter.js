@@ -45,11 +45,11 @@ const Counter = ({ pipe }) => {
     <>
       <Container className="px-2 mt-1 mb-2">
         <Typography>
-          <span className=" font-robotoSlab font-medium text-red-700 mr-1">
+          <span className=" font-robotoSlab font-bold text-[#ed1c24] mr-1">
             {costsForUnit}
           </span>
           грн/
-          <span className=" font-robotoSlab font-medium text-red-700">
+          <span className=" font-robotoSlab font-bold text-[#ed1c24]">
             {unit}
           </span>
         </Typography>
@@ -71,7 +71,6 @@ const Counter = ({ pipe }) => {
             кг
           </Button>
           <Button
-            data-weightOneMeter={pipe.weightOneMeter}
             onClick={() => setUnit("мп")}
             className={`${
               unit === "мп"
@@ -113,7 +112,7 @@ const Counter = ({ pipe }) => {
         </ButtonGroup>
         <Typography className="font-robotoSlab font-medium ">
           ВАРТІСТЬ:
-          <span className="ml-1 font-robotoSlab font-medium text-red-700 mr-1">
+          <span className="ml-1 font-robotoSlab font-bold text-[#ed1c24] mr-1">
             {sum}
           </span>
           грн.

@@ -2,11 +2,12 @@ import Image from "next/image";
 import ImagePipes from "../../assets/images/pipes-2.png";
 import { Box, Button, Paper, Typography } from "@mui/material";
 import Counter from "../Counter/Counter";
+import Link from "next/link";
 
 const PipeCard = ({ pipe }) => {
   return (
-    <Paper className="h-[450px]">
-      <article className="flex flex-col w-full h-full py-2">
+    <Paper className="py-2">
+      <article className="flex flex-col w-full py-2">
         <Box className="px-2 py-1">
           <Typography
             variant="p"
@@ -33,10 +34,14 @@ const PipeCard = ({ pipe }) => {
         </Typography>
 
         <Counter pipe={pipe} />
-        {/* <Button className="mt-2" variant="outlined">
-          Купити
-        </Button> */}
       </article>
+      <Button
+        className="ml-[10%]  w-[80%] mt-10 bg-inherit border border-solid border-[#ed1c24] hover:bg-[#ed1c24] hover:text-white text-[#ed1c24] "
+        variant="contained"
+        href="#contained-buttons"
+      >
+        <Link href={"/"}>Купити</Link>
+      </Button>
     </Paper>
   );
 };
