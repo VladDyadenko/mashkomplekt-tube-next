@@ -1,24 +1,26 @@
 import Image from "next/image";
-import ImagePipes from "../../assets/images/tube-2-1280.jpg";
-import { Paper, Typography } from "@mui/material";
+import ImagePipes from "../../assets/images/pipes-2.png";
+import { Box, Button, Paper, Typography } from "@mui/material";
 import Counter from "../Counter/Counter";
 
-const PipeCard = () => {
+const PipeCard = ({ pipe }) => {
   return (
     <Paper className="h-[450px]">
       <article className="flex flex-col w-full h-full py-2">
-        <Typography
-          variant="p"
-          className="text-start px-1 text-[18px] font-medium  "
-        >
-          Трубa
-        </Typography>
-        <Typography
-          variant="p"
-          className="text-start px-1 text-lg font-medium "
-        >
-          ф 100 мм х 12,0 мм
-        </Typography>
+        <Box className="px-2 py-1">
+          <Typography
+            variant="p"
+            className="text-start px-1 text-[18px] font-medium  "
+          >
+            Трубa
+          </Typography>
+          <Typography
+            variant="p"
+            className="text-start px-1 text-lg font-medium "
+          >
+            {pipe.diameter} мм х {pipe.wallThickness} мм
+          </Typography>
+        </Box>
 
         <Image
           priority={true}
@@ -26,7 +28,14 @@ const PipeCard = () => {
           alt="Picture tubes"
           className="w-full h-auto block rounded mb-2"
         />
-        <Counter />
+        <Typography className="px-2 my-1" variant="p">
+          <a href="#">На складі</a>
+        </Typography>
+
+        <Counter pipe={pipe} />
+        {/* <Button className="mt-2" variant="outlined">
+          Купити
+        </Button> */}
       </article>
     </Paper>
   );
