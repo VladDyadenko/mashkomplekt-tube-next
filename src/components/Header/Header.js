@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
+import { BsCart3, BsFillPersonPlusFill } from "react-icons/bs";
 
 const pages = [
   { name: "Про нас", path: "/" },
@@ -143,6 +144,7 @@ const Header2 = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              marginRight: 10,
             }}
           >
             <Box
@@ -152,14 +154,29 @@ const Header2 = () => {
             >
               {contacts.map((contact) => (
                 <Link key={contact.name} href={contact.path}>
-                  <Typography
-                    sx={{ fontSize: 14, marginY: 0.5 }}
-                    textAlign="start"
-                  >
+                  <Typography sx={{ marginY: 0.5 }} textAlign="start">
                     {contact.name}
                   </Typography>
                 </Link>
               ))}
+            </Box>
+          </Box>
+          <Box className="">
+            <Box className="flex items-center justify-start ">
+              <Link href={"/basket"}>
+                <Typography className="font-robotoSlab mr-2 ">
+                  Корзина товарів
+                </Typography>
+              </Link>
+              <BsCart3 className="w-5 h-5" />
+            </Box>
+            <Box className="flex items-center justify-start ">
+              <Button className="font-robotoSlab text-white" variant="text">
+                <Typography className="mr-2 font-robotoSlab text-[14px]">
+                  Вхід
+                </Typography>
+              </Button>
+              <BsFillPersonPlusFill className="w-5 h-5" />
             </Box>
           </Box>
         </Toolbar>
