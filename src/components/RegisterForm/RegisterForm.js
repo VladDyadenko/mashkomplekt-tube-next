@@ -1,3 +1,4 @@
+"use client";
 const {
   Dialog,
   DialogTitle,
@@ -5,29 +6,37 @@ const {
   DialogContentText,
   DialogActions,
   Button,
+  Box,
 } = require("@mui/material");
 
-<Dialog
-  fullScreen={fullScreen}
-  open={open}
-  onClose={handleClose}
-  aria-labelledby="responsive-dialog-title"
->
-  <DialogTitle id="responsive-dialog-title">
-    {"Use Google's location service?"}
-  </DialogTitle>
-  <DialogContent>
-    <DialogContentText>
-      Let Google help apps determine location. This means sending anonymous
-      location data to Google, even when no apps are running.
-    </DialogContentText>
-  </DialogContent>
-  <DialogActions>
-    <Button autoFocus onClick={handleClose}>
-      Disagree
-    </Button>
-    <Button onClick={handleClose} autoFocus>
-      Agree
-    </Button>
-  </DialogActions>
-</Dialog>;
+function RegisterForm({ open, handleClose }) {
+  return (
+    <div>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogContent>
+          <DialogContentText>
+            <Button
+              fullWidth
+              className="text-textColor mb-4"
+              variant="contained"
+            >
+              Google
+            </Button>
+            <Button
+              fullWidth
+              className="text-textColor mb-4"
+              variant="contained"
+            >
+              Пошта
+            </Button>
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Close</Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
+}
+
+export default RegisterForm;

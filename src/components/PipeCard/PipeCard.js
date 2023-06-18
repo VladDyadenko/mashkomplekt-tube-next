@@ -40,7 +40,7 @@ const PipeCard = ({ pipe }) => {
         variant="contained"
         href="#contained-buttons"
       >
-        <Link href={"/"}>Купити</Link>
+        Купити
       </Button>
     </Paper>
   );
