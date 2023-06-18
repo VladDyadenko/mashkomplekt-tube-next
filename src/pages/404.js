@@ -1,7 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
 import defaultImg404 from "../assets/images/404notfound.webp";
-import MainLayout from "@/components/seo/MainLayout";
 
 const ErrorPage = () => {
   return (
