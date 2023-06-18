@@ -1,9 +1,9 @@
-import Filter from "@/components/Filter/Filter";
-import HeadSite from "@/components/seo/HeadSite";
+import Filter from "../../components/Filter/Filter";
+import HeadSite from "../../components/seo/HeadSite";
 import { Container, Grid, Paper } from "@mui/material";
 import { seoHeadTubes } from "../../assets/constants/HeadSeo";
-import PipeCard from "@/components/PipeCard/PipeCard";
-import { pipes } from "@/assets/constants/pipes";
+import PipeCard from "../../components/PipeCard/PipeCard";
+import { pipes } from "../../assets/constants/pipes";
 
 const Tube = () => {
   return (

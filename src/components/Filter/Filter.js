@@ -2,7 +2,7 @@ import { BsSliders } from "react-icons/bs";
 import { FilterClineBtn } from "./Filter.styled";
 import FilterSelect from "../FilterSelect/FilterSelect";
 import { useRouter } from "next/router";
-import { pipes } from "@/assets/constants/pipes";
+import { pipes } from "../../assets/constants/pipes";
 
 const Filter = () => {
   const router = useRouter();

@@ -11,8 +11,9 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 import { BsCart3, BsFillPersonPlusFill } from "react-icons/bs";
-import RegisterForm from "../RegisterForm/RegisterForm";
+
 import { useState } from "react";
+import AuthDialog from "../AuthDialog/AuthDialog";
 
 const pages = [
   { name: "Про нас", path: "/" },
@@ -31,8 +32,6 @@ const contacts = [
     path: "mailto:stilmagroup@gmail.com",
   },
 ];
-
-const settings = ["Linkedin", "Telegram"];
 
 const Header2 = () => {
   const [open, setOpen] = useState(false);
@@ -178,7 +177,7 @@ const Header2 = () => {
                   <Typography sx={{ display: { xs: "none", lg: "block" } }}>
                     Корзина товарів
                   </Typography>
-                  <BsCart3 className="w-5 h-5 ml-2" />
+                  <BsCart3 className="w-5 h-5 ml-2 hover:scale-125" />
                 </Link>
               </Box>
               <Box className="flex items-center justify-start ">
@@ -190,14 +189,14 @@ const Header2 = () => {
                   <Typography sx={{ display: { xs: "none", lg: "block" } }}>
                     Вхід
                   </Typography>
-                  <BsFillPersonPlusFill className="w-5 h-5 ml-2" />
+                  <BsFillPersonPlusFill className="w-5 h-5 ml-2 hover:scale-125" />
                 </Button>
               </Box>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-      <RegisterForm open={open} handleClose={handleClose} />
+      <AuthDialog open={open} handleClose={handleClose} />
     </>
   );
 };
