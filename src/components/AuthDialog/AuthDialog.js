@@ -1,7 +1,7 @@
 "use client";
 import { Dialog, DialogContent, DialogActions, Button } from "@mui/material";
 import { useState } from "react";
-import Main from "./form/main";
+import Main from "./form/Main";
 import Register from "./form/Register";
 import Login from "./form/Login";
 
